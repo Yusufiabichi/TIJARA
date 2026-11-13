@@ -1,0 +1,6 @@
+@TijaraAPI_HostAddress = http://localhost:5014
+
+GET {{TijaraAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
