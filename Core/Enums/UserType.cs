@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Core.Enums
+﻿namespace Core.Enums
 {
-    internal class UserType
+    public enum UserType
     {
+        Admin = 1,
+        Exporter = 2,
+        Buyer = 3,
+        DeliveryAgent = 4
     }
 }
