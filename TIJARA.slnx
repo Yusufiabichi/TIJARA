@@ -1,5 +1,7 @@
 <Solution>
+  <Project Path="Application/Application.csproj" Id="0ccc95bd-bbdf-469f-b87b-646206c7cfd4" />
   <Project Path="Core/Core.csproj" />
   <Project Path="Domain/Domain.csproj" />
-  <Project Path="TijaraAPI/Web.csproj" />
+  <Project Path="Infrastructure/Infrastructure.csproj" Id="76bfd164-6a42-46c6-91d1-eda82e02e583" />
+  <Project Path="Web/Web.csproj" Id="7d4b0179-49fa-4cad-93c4-4772ee496a2a" />
 </Solution>

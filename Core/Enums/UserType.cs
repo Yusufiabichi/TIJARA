@@ -5,6 +5,5 @@
         Admin = 1,
         Exporter = 2,
         Buyer = 3,
-        DeliveryAgent = 4
     }
 }

@@ -8,7 +8,7 @@
 
         // Trade operations
         public const string Inspector = "Inspector";
-        public const string LogisticsProvider = "LogisticsProvider";
+        public const string LogisticsProvider = "Logistics Provider";
 
         // Platform management
         public const string SupportStaff = "SupportStaff";
@@ -58,5 +58,17 @@
             [Admin] = "Administrator",
             [SuperAdmin] = "Super Administrator"
         };
+
+        public static readonly string[] All =
+        [
+            Buyer,
+            Seller,
+            Inspector,
+            LogisticsProvider,
+            SupportStaff,
+            Moderator,
+            Admin,
+            SuperAdmin
+        ];
     }
 }
