@@ -3,6 +3,11 @@
     public enum DocumentType
     {
         WeighridgeTicket,
-        DeliveryPhoto
+        DeliveryPhoto, 
+        CertificateOfQuality,
+        PhytosanitaryCertificate,
+        PreShipmentInspection, 
+        InspectionReport, 
+        BusinessVerification
     }
 }

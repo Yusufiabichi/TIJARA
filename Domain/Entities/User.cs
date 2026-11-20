@@ -10,9 +10,13 @@ namespace Domain.Entities
         public string Surname { get; set; }
         public string Email { get; set; }
         public string PhoneNumber { get; set; }
+        public string PasswordHash { get; set; }
 
         //public RolesConstant Role { get; set; }
         public UserType UserType { get; set; }
+        public bool EmailConfirmed { get; set; }
+        public ExporterProfile? ExporterProfile { get; set; }   // 1:1, only if Role == Exporter
+        public BuyerProfile? BuyerProfile { get; set; }     // 1:1 , only if Role == Buyer
         public EntityStatus Status { get; set; } = EntityStatus.Active;
         public Genders Gender { get; set; }
         public DateTime? ModifiedOn { get; set; } = DateTime.UtcNow;
