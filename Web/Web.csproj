@@ -7,8 +7,33 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="..\..\..\..\Downloads\cash-crop.jpg" Link="wwwroot\images\cash-crop.jpg" />
+    <Content Include="..\..\..\..\Downloads\grain.jpg" Link="wwwroot\images\grain.jpg" />
+    <Content Include="..\..\..\..\Downloads\hero1.jpg" Link="wwwroot\images\hero1.jpg" />
+    <Content Include="..\..\..\..\Downloads\hero2.jpg" Link="wwwroot\images\hero2.jpg" />
+    <Content Include="..\..\..\..\Downloads\hero3.jpg" Link="wwwroot\images\hero3.jpg" />
+    <Content Include="..\..\..\..\Downloads\nuts.jpg" Link="wwwroot\images\nuts.jpg" />
+    <Content Include="..\..\..\..\Downloads\spices.jpg" Link="wwwroot\images\spices.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="10.0.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Application\Application.csproj" />
     <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\images\" />
   </ItemGroup>
 
 </Project>

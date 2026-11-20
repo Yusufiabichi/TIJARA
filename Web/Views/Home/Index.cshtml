@@ -1,8 +1,480 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "African Trade, Connected Globally";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<!-- HERO -->
+<section class="hero-section">
+    <div class="container">
+        <div class="row align-items-center gy-5">
+            <div class="col-lg-6">
+                <span class="eyebrow">AFRICAN AGRICULTURAL TRADE</span>
+
+                <h1 class="hero-title">
+                    African trade,<br />
+                    <span>connected globally.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Source verified agricultural products, connect with trusted suppliers and buyers,
+                    and manage cross-border trade with confidence.
+                </p>
+
+                <div class="hero-actions">
+                    <a asp-controller="Marketplace" asp-action="Index" class="btn btn-primary-custom btn-lg">
+                        Explore Marketplace <span>→</span>
+                    </a>
+                    <a asp-controller="Account" asp-action="Register" class="btn btn-outline-custom btn-lg">
+                        Become a Supplier
+                    </a>
+                </div>
+
+                <div class="hero-highlights">
+                    <div><span class="highlight-icon"><i class="fa-solid fa-circle-check"></i></span>Verified Suppliers</div>
+                    <div><span class="highlight-icon"><i class="fa-solid fa-shield-halved"></i></span>Structured Transactions</div>
+                    <div><span class="highlight-icon"><i class="fa-solid fa-earth-africa"></i></span>Global Reach</div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="hero-image-wrapper">
+                    <img src="~/images/hero2.jpg" asp-append-version="true"
+                         alt="African agricultural commodities ready for trade" class="hero-image" />
+                    <div class="hero-image-card">
+                        <div class="hero-card-icon">
+                            <i class="fa-solid fa-earth-africa"></i>
+                        </div>
+                        <div>
+                            <strong>Trade without borders</strong>
+                            <p>Connecting African businesses to global markets.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- STATS STRIP (Social Proof) -->
+<section class="stats-strip">
+    <div class="container">
+        <div class="row text-center gy-4">
+            <div class="col-6 col-md-3">
+                <div class="stat-item">
+                    <strong>500+</strong>
+                    <span>Verified Suppliers</span>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="stat-item">
+                    <strong>30+</strong>
+                    <span>Countries Connected</span>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="stat-item">
+                    <strong>10,000+</strong>
+                    <span>Trade Connections</span>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="stat-item">
+                    <strong>100%</strong>
+                    <span>Structured Transactions</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TRUST STRIP -->
+<section class="trust-strip">
+    <div class="container">
+        <div class="row gy-3 text-center">
+            <div class="col-6 col-md-3"><div class="trust-item"><span><i class="fa-solid fa-wheat-awn"></i></span><strong>Agricultural Products</strong></div></div>
+            <div class="col-6 col-md-3"><div class="trust-item"><span><i class="fa-solid fa-handshake"></i></span><strong>Business Connections</strong></div></div>
+            <div class="col-6 col-md-3"><div class="trust-item"><span><i class="fa-solid fa-shield-halved"></i></span><strong>Structured Trade</strong></div></div>
+            <div class="col-6 col-md-3"><div class="trust-item"><span><i class="fa-solid fa-earth-africa"></i></span><strong>Global Opportunities</strong></div></div>
+        </div>
+    </div>
+</section>
+
+<!-- CATEGORIES -->
+<section class="section categories-section">
+    <div class="container">
+        <div class="section-heading d-flex justify-content-between align-items-end flex-wrap gap-3">
+            <div>
+                <span class="eyebrow">EXPLORE THE MARKETPLACE</span>
+                <h2>Discover agricultural products</h2>
+                <p>Explore commodities and connect with businesses offering the products you need.</p>
+            </div>
+            <a asp-controller="Marketplace" asp-action="Index" class="section-link">View all products →</a>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-6 col-lg-3">
+                <a asp-controller="Marketplace" asp-action="Index" asp-route-category="Grains" class="category-card">
+                    <div class="category-image"><img src="~/images/grains.jpg" alt="Grains and cereals" loading="lazy" /></div>
+                    <div class="category-info"><h5>Grains & Cereals</h5><span>Explore products →</span></div>
+                </a>
+            </div>
+            <div class="col-6 col-lg-3">
+                <a asp-controller="Marketplace" asp-action="Index" asp-route-category="Spices" class="category-card">
+                    <div class="category-image"><img src="~/images/spices.jpg" alt="Agricultural spices" loading="lazy" /></div>
+                    <div class="category-info"><h5>Spices</h5><span>Explore products →</span></div>
+                </a>
+            </div>
+            <div class="col-6 col-lg-3">
+                <a asp-controller="Marketplace" asp-action="Index" asp-route-category="Nuts" class="category-card">
+                    <div class="category-image"><img src="~/images/nuts.jpg" alt="Agricultural nuts" loading="lazy" /></div>
+                    <div class="category-info"><h5>Nuts & Seeds</h5><span>Explore products →</span></div>
+                </a>
+            </div>
+            <div class="col-6 col-lg-3">
+                <a asp-controller="Marketplace" asp-action="Index" asp-route-category="CashCrops" class="category-card">
+                    <div class="category-image"><img src="~/images/cash-crop.jpg" alt="Cash crops" loading="lazy" /></div>
+                    <div class="category-info"><h5>Cash Crops</h5><span>Explore products →</span></div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FEATURED PRODUCTS -->
+<section class="section featured-section">
+    <div class="container">
+        <div class="section-heading">
+            <span class="eyebrow">MARKETPLACE</span>
+            <h2>Products worth exploring</h2>
+            <p>Discover some of the agricultural commodities traded across African markets.</p>
+        </div>
+
+        <div class="row g-4">
+            <!-- Product Card (reusable markup) -->
+            <div class="col-6 col-lg-3">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="~/images/products/sesame-seeds.jpg" alt="Sesame seeds" loading="lazy" />
+                        <span class="product-tag">Verified Supplier</span>
+                    </div>
+                    <div class="product-content">
+                        <span class="product-category">OILSEEDS</span>
+                        <h5>Sesame Seeds</h5>
+                        <ul class="product-meta">
+                            <li><i class="fa-solid fa-location-dot"></i>Nigeria</li>
+                            <li><i class="fa-solid fa-boxes-stacked"></i>MOQ: 20 MT</li>
+                        </ul>
+                        <a asp-controller="Marketplace" asp-action="Index" asp-route-q="Sesame Seeds" class="product-link">
+                            View offers →
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-lg-3">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="~/images/products/dried-ginger.jpg" alt="Dried ginger" loading="lazy" />
+                        <span class="product-tag">Verified Supplier</span>
+                    </div>
+                    <div class="product-content">
+                        <span class="product-category">SPICES</span>
+                        <h5>Dried Ginger</h5>
+                        <ul class="product-meta">
+                            <li><i class="fa-solid fa-location-dot"></i>Nigeria</li>
+                            <li><i class="fa-solid fa-boxes-stacked"></i>MOQ: 10 MT</li>
+                        </ul>
+                        <a asp-controller="Marketplace" asp-action="Index" asp-route-q="Dried Ginger" class="product-link">
+                            View offers →
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-lg-3">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="~/images/products/cashew-nuts.jpg" alt="Raw cashew nuts" loading="lazy" />
+                        <span class="product-tag">Verified Supplier</span>
+                    </div>
+                    <div class="product-content">
+                        <span class="product-category">NUTS</span>
+                        <h5>Cashew Nuts</h5>
+                        <ul class="product-meta">
+                            <li><i class="fa-solid fa-location-dot"></i>Ghana</li>
+                            <li><i class="fa-solid fa-boxes-stacked"></i>MOQ: 40 MT</li>
+                        </ul>
+                        <a asp-controller="Marketplace" asp-action="Index" asp-route-q="Cashew Nuts" class="product-link">
+                            View offers →
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-lg-3">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="~/images/products/maize.jpg" alt="Yellow maize grains" loading="lazy" />
+                        <span class="product-tag">Verified Supplier</span>
+                    </div>
+                    <div class="product-content">
+                        <span class="product-category">GRAINS</span>
+                        <h5>Maize</h5>
+                        <ul class="product-meta">
+                            <li><i class="fa-solid fa-location-dot"></i>Kenya</li>
+                            <li><i class="fa-solid fa-boxes-stacked"></i>MOQ: 20 MT</li>
+                        </ul>
+                        <a asp-controller="Marketplace" asp-action="Index" asp-route-q="Maize" class="product-link">
+                            View offers →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-5">
+            <a asp-controller="Marketplace" asp-action="Index" class="btn btn-outline-custom btn-lg">
+                Explore Full Marketplace →
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section how-section">
+    <div class="container">
+        <div class="section-heading text-center mx-auto">
+            <span class="eyebrow">HOW TIJARA WORKS</span>
+            <h2>Trade with greater confidence</h2>
+            <p>From discovering products to completing deliveries, Tijara simplifies agricultural trade.</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="process-card">
+                    <div class="process-number">01</div>
+                    <div class="process-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+                    <h4>Discover Opportunities</h4>
+                    <p>Find agricultural products, explore suppliers, and connect with potential trading partners.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="process-card">
+                    <div class="process-number">02</div>
+                    <div class="process-icon"><i class="fa-solid fa-handshake"></i></div>
+                    <h4>Agree on Trade</h4>
+                    <p>Discuss quantities, pricing, delivery terms, and establish clear trade agreements.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="process-card">
+                    <div class="process-number">03</div>
+                    <div class="process-icon"><i class="fa-solid fa-box"></i></div>
+                    <h4>Manage Your Transaction</h4>
+                    <p>Track agreed milestones, payments, and delivery progress throughout the transaction.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TRUST SECTION -->
+<section class="section trust-section">
+    <div class="container">
+        <div class="row align-items-center gy-5">
+            <div class="col-lg-6">
+                <img src="~/images/tijara-trade.jpg" alt="African agricultural trade and logistics" class="trust-image" loading="lazy" />
+            </div>
+            <div class="col-lg-6">
+                <span class="eyebrow">BUILT FOR TRUST</span>
+                <h2 class="trust-title">Better connections.<br />More confident trade.</h2>
+                <p class="trust-description">
+                    Agricultural trade involves more than finding a buyer or seller.
+                    It requires clear agreements, reliable communication, and confidence at every stage.
+                </p>
+
+                <div class="trust-feature">
+                    <span class="feature-check"><i class="fa-solid fa-check"></i></span>
+                    <div><h6>Business Verification</h6><p>Build confidence through business identity and verification.</p></div>
+                </div>
+
+                <div class="trust-feature">
+                    <span class="feature-check"><i class="fa-solid fa-check"></i></span>
+                    <div><h6>Structured Trade Agreements</h6><p>Clearly define quantities, prices, payment terms, and delivery milestones.</p></div>
+                </div>
+
+                <div class="trust-feature">
+                    <span class="feature-check"><i class="fa-solid fa-check"></i></span>
+                    <div><h6>Transaction Management</h6><p>Track payments, milestones, and delivery progress in one place.</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TESTIMONIALS (NEW) -->
+<section class="section testimonials-section">
+    <div class="container">
+        <div class="section-heading text-center mx-auto">
+            <span class="eyebrow">TRUSTED BY BUSINESSES</span>
+            <h2>What our traders say</h2>
+            <p>Real feedback from buyers and suppliers using Tijara across Africa and beyond.</p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">
+                        "Tijara helped us find verified suppliers in Nigeria within days. The structured trade
+                        process gave us the confidence to place a large order."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AK</div>
+                        <div>
+                            <strong>Amara K.</strong>
+                            <span>Procurement Lead, Agri Foods Ltd</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">
+                        "As a smallholder supplier, I never had access to international buyers before.
+                        Tijara opened a direct channel to global markets."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MJ</div>
+                        <div>
+                            <strong>Mohammed J.</strong>
+                            <span>Supplier, Sahel Farms</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">
+                        "Clear transactions and reliable documentation. Tijara's structured trade
+                        management saved our team countless hours."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">CN</div>
+                        <div>
+                            <strong>Chidi N.</strong>
+                            <span>Operations Manager, Global Trade Co.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ (NEW) -->
+<section class="section faq-section">
+    <div class="container">
+        <div class="section-heading text-center mx-auto">
+            <span class="eyebrow">COMMON QUESTIONS</span>
+            <h2>Frequently asked questions</h2>
+            <p>Everything you need to know before starting your trade journey on Tijara.</p>
+        </div>
+
+        <div class="accordion faq-accordion" id="faqAccordion">
+            <div class="accordion-item">
+                <h3 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                        How do I know suppliers are verified?
+                    </button>
+                </h3>
+                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Every supplier on Tijara goes through a business verification process including
+                        identity checks, business registration, and trade history review.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                        What is the minimum order quantity?
+                    </button>
+                </h3>
+                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        MOQ varies by product and supplier. Each product listing shows the minimum order
+                        quantity, and you can negotiate directly with suppliers.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                        How are payments handled?
+                    </button>
+                </h3>
+                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Payments follow agreed terms in a structured trade agreement. Both parties can
+                        track milestones and release funds based on delivery progress.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                        Can I ship internationally?
+                    </button>
+                </h3>
+                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Yes. Tijara supports cross-border trade with logistics partners in multiple regions.
+                        Shipping and delivery terms are agreed per trade.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                        Is Tijara free to use?
+                    </button>
+                </h3>
+                <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Creating an account and exploring the marketplace is free. Transaction fees are
+                        outlined transparently for sellers when listing and closing trades.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SUPPLIER CTA -->
+<section class="supplier-section">
+    <div class="container">
+        <div class="supplier-content">
+            <span class="eyebrow">FOR AFRICAN BUSINESSES</span>
+            <h2>Take your agricultural business to new markets.</h2>
+            <p>Connect with potential buyers, showcase your products, and create new opportunities for your business.</p>
+            <div class="supplier-actions">
+                <a asp-controller="Account" asp-action="Register" class="btn btn-light btn-lg">
+                    Start Selling on Tijara →
+                </a>
+                <a asp-controller="Marketplace" asp-action="Index" class="btn supplier-outline-btn btn-lg">
+                    Explore Marketplace
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+    <div class="container text-center">
+        <span class="eyebrow">YOUR NEXT TRADE STARTS HERE</span>
+        <h2>Let's connect African trade to global opportunities.</h2>
+        <p>Whether you're sourcing agricultural products or looking for new markets, Tijara is the place to start.</p>
+        <a asp-controller="Marketplace" asp-action="Index" class="btn btn-primary-custom btn-lg">
+            Explore Tijara →
+        </a>
+    </div>
+</section>

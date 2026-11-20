@@ -3,48 +3,178 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Web</title>
-    <script type="importmap"></script>
+    <meta name="theme-color" content="#123D32" />
+
+    <title>@ViewData["Title"] - Tijara</title>
+
+    <meta name="description"
+          content="Tijara connects African agricultural businesses with trusted buyers and trading partners worldwide. Verified suppliers, structured transactions, global reach." />
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Tijara" />
+    <meta property="og:title" content="@(ViewData["Title"] ?? "African Trade, Connected Globally") - Tijara" />
+    <meta property="og:description" content="Verified agricultural suppliers, structured trade agreements, and global market access." />
+    <meta property="og:image" content="~/images/og-tijara.jpg" asp-append-version="true" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/Web.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Tijara.styles.css" asp-append-version="true" />
+
+    <!-- Organization Structured Data -->
+    <script type="application/ld+json">
+            {
+              "@@context": "https://schema.org",
+              "@@type": "Organization",
+              "name": "Tijara",
+              "url": "https://tijara.example",
+              "logo": "https://tijara.example/images/logo.png",
+              "description": "B2B marketplace connecting African agricultural suppliers with global buyers.",
+              "sameAs": []
+            }
+    </script>
+
+    @await RenderSectionAsync("Styles", required: false)
 </head>
+
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Web</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Announcement Bar -->
+    <div class="announcement-bar" role="region" aria-label="Announcement">
+        <div class="container">
+            <span>🌍 Now onboarding verified suppliers in West & East Africa — <a href="#">Learn more →</a></span>
+        </div>
+    </div>
+
+    <header class="site-header">
+        <nav class="navbar navbar-expand-lg" aria-label="Primary navigation">
+            <div class="container">
+                <a class="navbar-brand brand-logo" asp-controller="Home" asp-action="Index" aria-label="Tijara home">
+                    Tijara<span>.</span>
+                </a>
+
+                <button class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#mainNavbar"
+                        aria-controls="mainNavbar"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
+
+                <div class="collapse navbar-collapse" id="mainNavbar">
+                    <ul class="navbar-nav mx-auto mb-3 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" asp-controller="Home" asp-action="Index">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" asp-controller="Marketplace" asp-action="Index">Marketplace</a></li>
+                        <li class="nav-item"><a class="nav-link" asp-controller="Home" asp-action="HowItWorks">How It Works</a></li>
+                        <li class="nav-item"><a class="nav-link" asp-controller="Home" asp-action="About">About Us</a></li>
                     </ul>
+
+                    <div class="nav-actions d-flex flex-column flex-lg-row gap-2 align-items-lg-center">
+                        <a class="btn btn-login" asp-controller="Account" asp-action="Login">Log In</a>
+                        <a class="btn btn-primary-custom" asp-controller="Account" asp-action="Register">
+                            Get Started <span aria-hidden="true">→</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </nav>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
 
-    <footer class="border-top footer text-muted">
+    <main id="main-content" role="main">
+        @RenderBody()
+    </main>
+
+    <!-- Footer Trust Badges -->
+    <section class="footer-trust-bar" aria-label="Trust indicators">
         <div class="container">
-            &copy; 2026 - Web - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            <div class="footer-trust-items">
+                <div class="trust-pill"><span><i class="fa-solid fa-lock"></i></span>Secure Transactions</div>
+                <div class="trust-pill"><span><i class="fa-solid fa-check"></i></span>Verified Businesses</div>
+                <div class="trust-pill"><span><i class="fa-solid fa-earth-africa"></i></span>Global Delivery</div>
+                <div class="trust-pill"><span><i class="fa-solid fa-comments"></i></span>Trade Support</div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-4 col-md-6">
+                    <a class="brand-logo footer-brand" asp-controller="Home" asp-action="Index">
+                        Tijara<span>.</span>
+                    </a>
+                    <p class="footer-description">
+                        African trade, connected globally. Connecting agricultural businesses,
+                        trusted buyers and suppliers across borders.
+                    </p>
+                    <div class="footer-social" aria-label="Social media">
+                        <a href="#" aria-label="LinkedIn">in</a>
+                        <a href="#" aria-label="X / Twitter">𝕏</a>
+                        <a href="#" aria-label="Instagram">◎</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h6>Explore</h6>
+                    <ul class="footer-links">
+                        <li><a asp-controller="Marketplace" asp-action="Index">Marketplace</a></li>
+                        <li><a asp-controller="Home" asp-action="HowItWorks">How It Works</a></li>
+                        <li><a asp-controller="Home" asp-action="About">About Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h6>For Business</h6>
+                    <ul class="footer-links">
+                        <li><a asp-controller="Account" asp-action="Register">Become a Seller</a></li>
+                        <li><a asp-controller="Marketplace" asp-action="Index">Find Products</a></li>
+                        <li><a href="#">Trade Support</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h6>Legal</h6>
+                    <ul class="footer-links">
+                        <li><a asp-controller="Home" asp-action="Privacy">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; @DateTime.Now.Year Tijara. All rights reserved.</p>
+                <span>African trade, connected globally.</span>
+            </div>
         </div>
     </footer>
+
+    <button class="back-to-top" aria-label="Back to top" id="backToTop">↑</button>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script>
+            (function() {
+                var btn = document.getElementById('backToTop');
+                if (!btn) return;
+                window.addEventListener('scroll', function() {
+                    btn.classList.toggle('visible', window.scrollY > 500);
+                });
+                btn.addEventListener('click', function() {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            })();
+    </script>
+
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
